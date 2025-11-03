@@ -14,7 +14,7 @@
 		496190492EB91C0800E22B62 /* Exceptions for "uikit-tutorial" folder in "uikit-tutorial" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Resources/Info.plist,
 			);
 			target = 496190362EB91C0400E22B62 /* uikit-tutorial */;
 		};
@@ -147,7 +147,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z98JFF3TQX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "uikit-tutorial/Info.plist";
+				INFOPLIST_FILE = "uikit-tutorial/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -179,7 +179,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z98JFF3TQX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "uikit-tutorial/Info.plist";
+				INFOPLIST_FILE = "uikit-tutorial/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
