@@ -9,11 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var greetingLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemPink
+        
+        greetingLabel.text = "Hello, Stephan!"
     }
 
 
+    
 }
 
