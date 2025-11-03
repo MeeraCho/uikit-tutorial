@@ -9,7 +9,7 @@ import UIKit
 
 class ButtonsViewController: UIViewController {
     
-    private var showNameButton: UIButton = {
+    private lazy var showNameButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Show name", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
@@ -21,7 +21,7 @@ class ButtonsViewController: UIViewController {
     
     private var nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "How are you?"
+        label.text = "I'm CodeMia"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.isHidden = false
         return label
@@ -47,6 +47,8 @@ class ButtonsViewController: UIViewController {
     
     @objc func onShowNameTapped() {
         nameLabel.isHidden.toggle()
+        let title = nameLabel.isHidden ? "Show name" : "Hidden name"
+        showNameButton.setTitle(title, for: .normal)
     }
  
 }
