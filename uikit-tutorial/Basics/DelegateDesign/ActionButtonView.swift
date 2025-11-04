@@ -7,7 +7,14 @@
 
 import UIKit
 
+protocol ActionButtonViewDelegate: AnyObject {
+    func onPrimaryTap()
+    func onSecondaryTap()
+}
+
 class ActionButtonView: UIView { // subclass of UIView. select cocoaTouch class and then UIView subclass
+    
+    weak var delegate: ActionButtonViewDelegate?
 
     private var primaryActionButton: UIButton = {
         let button = UIButton(type: .system)
@@ -53,10 +60,12 @@ class ActionButtonView: UIView { // subclass of UIView. select cocoaTouch class 
     
     @objc func handlePrimaryTap() {
         print("DEBUG: Primary button tapped in view..")
+        delegate?.onPrimaryTap()
     }
     
     @objc func handleSecondaryTap() {
         print("DEBUG: Secondary button tapped in view..")
+        delegate?.onSecondaryTap()
     }
     
 }

@@ -25,13 +25,27 @@ class DelegateDesignTutorialViewController: UIViewController {
         actionButtonView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         actionButtonView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
-        view.addSubview(textLabel)
+        actionButtonView.delegate = self
         
+        view.addSubview(textLabel)
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         textLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         textLabel.topAnchor.constraint(equalTo: actionButtonView.bottomAnchor, constant: 16).isActive = true
         
         textLabel.text = "Primary Action Button tapped"
+        textLabel.isHidden = true
     }
     
+}
+
+extension DelegateDesignTutorialViewController: ActionButtonViewDelegate {
+    func onPrimaryTap(){
+        print("DEBUG: Primary tapped in view controller")
+        textLabel.isHidden = false
+    }
+    
+    func onSecondaryTap(){
+        print("DEBUG: Secondary tapped in view controller")
+        textLabel.isHidden = true
+    }
 }
