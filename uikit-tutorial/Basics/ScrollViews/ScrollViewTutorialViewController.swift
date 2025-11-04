@@ -30,6 +30,8 @@ class ScrollViewTutorialViewController: UIViewController {
             stackView.addArrangedSubview(rect)
         }
         
+        scrollView.delegate = self
+        
         view.addSubview(scrollView)
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
@@ -52,6 +54,20 @@ class ScrollViewTutorialViewController: UIViewController {
         return view
     }
 
+}
+
+extension ScrollViewTutorialViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView){
+//        print("DEBUG: Scroll offset \(scrollView.contentOffset)")
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView){
+        print("DEBUG: Scroll view did end decel..")
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool){
+        print("DEBUG: Scroll view did end drag..")
+    }
 }
 
 #Preview {
