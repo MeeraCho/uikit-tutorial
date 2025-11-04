@@ -14,6 +14,8 @@ class ShapesTutorialViewController: UIViewController {
         view.backgroundColor = .systemRed
         return view
     }()
+    
+    private var circle = UIView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,16 @@ class ShapesTutorialViewController: UIViewController {
         rect.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         rect.widthAnchor.constraint(equalToConstant: 100).isActive = true
         rect.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        
+        view.addSubview(circle)
+        circle.backgroundColor = .systemBlue
+        circle.translatesAutoresizingMaskIntoConstraints = false
+        circle.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        circle.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        
+        circle.topAnchor.constraint(equalTo: rect.bottomAnchor, constant: 12).isActive = true
+        circle.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        circle.layer.cornerRadius = 100 / 2
 
     }
     
